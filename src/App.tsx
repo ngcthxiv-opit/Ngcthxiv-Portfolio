@@ -10,12 +10,10 @@ import {
   Phone, 
   Linkedin, 
   ExternalLink, 
-  GraduationCap, 
   Presentation, 
   BookOpen,
   Briefcase,
-  Code,
-  Github
+  Code
 } from 'lucide-react';
 
 type PageId = 'about' | 'work' | 'projects' | 'contact';
@@ -54,7 +52,7 @@ export default function App() {
             ))}
           </div>
           <a
-            href="https://drive.google.com/file/d/1qeLc6N77vW_prE4fpNngv9z8eB-rDp9H/view?usp=sharing"
+            href="https://drive.google.com/file/d/1aL9xuABuciiAkXvV_hDO-RuMo4sIdpbc/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white text-cyan-500 px-6 py-2 rounded-full text-sm font-bold shadow-sm hover:bg-cyan-50 transition-colors"
@@ -92,7 +90,7 @@ export default function App() {
                       Work With Me
                     </button>
                     <button
-                      onClick={() => showPage('work')}
+                      onClick={() => showPage('projects')}
                       className="bg-white text-cyan-500 border-2 border-cyan-500 px-8 py-3 rounded-xl font-bold hover:bg-cyan-50 transition-all"
                     >
                       See My Work
@@ -241,7 +239,7 @@ export default function App() {
                           ))}
                         </div>
                         <div className="inline-block bg-white rounded-full px-5 py-1.5 shadow-sm border border-slate-100">
-                          <span className="text-slate-900 font-bold text-sm leading-none">Data Analytics Tools</span>
+                          <span className="text-slate-900 font-bold text-lg leading-none">Data Analytics Tools</span>
                         </div>
                         <ul className="grid grid-cols-2 gap-x-4 gap-y-1 text-slate-800 text-[19px] font-medium pl-2">
                           <li className="flex items-center gap-2">• Python</li>
@@ -262,7 +260,7 @@ export default function App() {
                           ))}
                         </div>
                         <div className="inline-block bg-white rounded-full px-5 py-1.5 shadow-sm border border-slate-100">
-                          <span className="text-slate-900 font-bold text-sm leading-none">AI & Project Management</span>
+                          <span className="text-slate-900 font-bold text-lg leading-none">AI & Project Management</span>
                         </div>
                         <ul className="space-y-1 text-slate-800 text-[19px] font-medium pl-2">
                           <li className="flex items-center gap-2">• ChatGPT</li>
@@ -279,16 +277,13 @@ export default function App() {
                     
                     <div className="space-y-6">
                       {[ 
-                        { title: "IELTS 5.5", date: "2022" },
-                        { title: "Google Data Analytics Professional", date: "2024" },
-                        { title: "Nvidia Certificate: Getting Started with Deep Learning", date: "2025" },
-                        { title: "Financial Data Analysis and Decision-Making in the Advent of AI", date: "2026" }
+                        { title: "Google Data Analytics Professional", date: "2024", logo: "/pic/16.png" },
+                        { title: "Nvidia Certificate: Getting Started with Deep Learning", date: "2025", logo: "/pic/17.png" },
+                        { title: "Financial Data Analysis and Decision-Making in the Advent of AI", date: "2026", logo: "/pic/15.png" }
                       ].map((cert, i) => (
                         <div key={i} className="flex items-center gap-6 group">
-                          <div className="w-20 h-20 shrink-0 bg-white rounded-2xl shadow-sm p-4 flex items-center justify-center border border-slate-100">
-                            <div className="bg-[#ff7043] w-12 h-12 rounded-lg flex items-center justify-center text-white shadow-md">
-                              <GraduationCap size={28} />
-                            </div>
+                          <div className="w-20 h-20 shrink-0 bg-white rounded-2xl shadow-sm p-2 flex items-center justify-center border border-slate-100">
+                            <img src={cert.logo} alt={cert.title} className="w-full h-full object-contain" />
                           </div>
                           <div>
                             <h4 className="text-slate-900 font-bold text-lg leading-tight group-hover:text-[#00366d] transition-colors">{cert.title}</h4>
@@ -316,7 +311,7 @@ export default function App() {
               
               <div className="bg-blue-50 p-8 rounded-3xl border border-blue-100">
                 <p className="text-slate-700 leading-relaxed text-justify">
-                  "After studying Financial Technology at the University of Economics and Law, I discovered my passion for <strong className="font-bold text-slate-900">combining business and technology to improve operational efficiency</strong>. I have strengthened my <strong className="font-bold text-slate-900">analytical and problem-solving skills</strong> through academic projects related to <strong className="font-bold text-slate-900">finance and data analysis</strong>. To better prepare for this role, I have also developed my <strong className="font-bold text-slate-900">teamwork, communication and system-thinking abilities</strong>. I am excited to apply for this position and gain experience working with professionals. Besides, I am confident that my energy and willingness to learn will contribute to your company's values."
+                  After studying Financial Technology at the University of Economics and Law, I discovered my passion for <strong className="font-bold text-slate-900">combining business and technology to improve operational efficiency</strong>. I have strengthened my <strong className="font-bold text-slate-900">analytical and problem-solving skills</strong> through academic projects related to <strong className="font-bold text-slate-900">finance and data analysis</strong>. To better prepare for this role, I have also developed my <strong className="font-bold text-slate-900">teamwork, communication and system-thinking abilities</strong>. I am excited to apply for this position and gain experience working with professionals. Besides, I am confident that my energy and willingness to learn will contribute to your company's values.
                 </p>
               </div>
 
@@ -392,7 +387,7 @@ export default function App() {
                   {
                     title: "Iceland Stocks Screener",
                     url: "https://github.com/ngcthxiv-opit/iceland_stocks_screener",
-                    icon: <Github size={20} />,
+                    iconSrc: "/pic/19.png",
                     cover: "/pic/12.png",
                     objectFit: "object-contain",
                     bgColor: "bg-black"
@@ -400,7 +395,7 @@ export default function App() {
                   {
                     title: "Retail Credit Portfolio Dashboard",
                     url: "https://github.com/ngcthxiv-opit/dashboard_Tin_Dung_KHCN",
-                    icon: <Github size={20} />,
+                    iconSrc: "/pic/19.png",
                     cover: "/pic/13.png",
                     objectFit: "object-cover",
                     bgColor: "bg-slate-200"
@@ -408,7 +403,7 @@ export default function App() {
                   {
                     title: "Financial Statement Analysis",
                     url: "https://admin.onhandbi.com/view/report/TVRRNE9BPT0=",
-                    icon: <ExternalLink size={20} />,
+                    iconSrc: "/pic/18.png",
                     cover: "/pic/14.png",
                     objectFit: "object-cover",
                     bgColor: "bg-slate-200"
@@ -419,7 +414,7 @@ export default function App() {
                     href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group bg-white p-4 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all"
+                    className="group bg-white p-4 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col"
                   >
                     <div className={`h-40 rounded-xl mb-4 overflow-hidden ${project.bgColor}`}>
                       <img
@@ -429,12 +424,12 @@ export default function App() {
                         referrerPolicy="no-referrer"
                       />
                     </div>
-                    <div className="flex justify-between items-center px-2">
-                      <h3 className="font-bold text-slate-800 group-hover:text-cyan-600 transition-colors uppercase text-sm">
+                    <div className="flex justify-between items-end px-2 mt-auto pt-2">
+                      <h3 className="font-bold text-slate-800 group-hover:text-cyan-600 transition-colors uppercase text-sm min-h-[2.5rem] flex items-end">
                         {project.title}
                       </h3>
-                      <div className="text-slate-400 group-hover:text-cyan-500 scale-90 group-hover:scale-100 transition-all">
-                        {project.icon}
+                      <div className="text-slate-400 group-hover:text-cyan-500 scale-90 group-hover:scale-100 transition-all shrink-0 ml-2">
+                        <img src={project.iconSrc} alt="link" className="w-6 h-6 object-contain" />
                       </div>
                     </div>
                   </a>
