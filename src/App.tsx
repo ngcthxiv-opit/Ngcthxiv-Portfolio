@@ -80,7 +80,7 @@ export default function App() {
                     <span className="text-[#00366d]">Transform Data into</span> <span className="text-red-500">Real Business Impact</span>
                   </h1>
                   <p className="text-xl text-slate-600 leading-relaxed">
-                    I’m <span className="text-cyan-500 font-bold">The Trinh</span> — a data-driven aspiring Data Analyst with hands-on experience in <span className="text-cyan-500 font-bold">financial analytics, dashboard development and end-to-end data projects.</span>
+                    I’m <span className="text-cyan-500 font-bold">The Trinh</span> — a Finance-focused Analyst with hands-on experience in <span className="text-cyan-500 font-bold">financial analytics, data-driven decision support and dashboard development.</span>
                   </p>
                   <div className="flex space-x-4">
                     <button
