@@ -159,7 +159,7 @@ export default function App() {
                             <ul className="space-y-4 text-slate-700 text-[17px] leading-relaxed">
                               <li className="flex gap-4 items-start">
                                 <span className="text-slate-900 font-bold mt-1.5">•</span>
-                                <div>Received the <strong>Academic Scholarship</strong> for Excellent Student (Term 3 - 2025; Term 1 - 2026) – Top 8% of the Fintech program.</div>
+                                <div>Received <strong>Academic Scholarship for 3 consecutive terms</strong> (2025 - 2026) – Top 8% of the Fintech program.</div>
                               </li>
                             </ul>
                           </div>
